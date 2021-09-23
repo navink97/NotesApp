@@ -1,0 +1,28 @@
+@import '../../../main-styles.scss';
+.input, .textarea{
+    background-color: $input-background-color;
+}
+
+.form-container{
+    max-width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    
+}
+input, textarea{
+    &.ng-valid{
+        border:0px;
+    }
+    &.ng-untouched{
+        border:0px;
+    }
+}
+input, textarea{
+    &.ng-invalid.ng-touched{
+        border-color:red;
+        &:focus{
+            box-shadow: 0px 0px 4px 2px rgba(red,0.1);
+        }
+    }
+
+}
