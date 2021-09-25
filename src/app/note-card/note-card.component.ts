@@ -25,7 +25,7 @@ export class NoteCardComponent implements OnInit {
     let style = window.getComputedStyle(this.bodyText.nativeElement,null);
     let viewableHeight = parseInt(style.getPropertyValue("height"),10);
 
-    if(this.body.length>150)
+    if(this.body && this.body.length>150)
     {
       this.renderer.setStyle(this.truncator.nativeElement,'display','block');
     }
